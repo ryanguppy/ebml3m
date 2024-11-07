@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="sizeguide_html.css?h=69351dfb">
+</head>
+<body>
+<div class="textstyle1">
+  <a href="index.html"><img src="rc_images/embl_m.png" width="500" height="500" id="img_6df3d864" alt="" title="" border="0" /></a>
+<div id="html_15ec8179"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Size Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* White background */
+        }
+
+        .size-chart-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 120px;
+            width: 90%;
+            max-width: 8000px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .size-chart {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .size-chart th,
+        .size-chart td {
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .size-chart th {
+            font-size: 1em;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .toggle-switch {
+            width: 120px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-switch .toggle-button {
+            width: 50%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: #333;
+            position: absolute;
+            transition: 0.3s;
+        }
+
+        .toggle-label {
+            z-index: 1;
+            color: #666;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .toggle-label.active {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="size-chart-container">
+    <table class="size-chart">
+        <thead>
+            <tr>
+                <th>Sizes</th>
+                <th>XXS</th>
+                <th>XS</th>
+                <th>S</th>
+                <th>M</th>
+                <th>L</th>
+                <th>XL</th>
+                <th>XXL</th>
+                <th>XXXL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A LENGTH HSP (<span id="unit-a">CM</span>)</td>
+                <td id="a-xxs">61</td>
+                <td id="a-xs">63</td>
+                <td id="a-s">65</td>
+                <td id="a-m">67</td>
+                <td id="a-l">69</td>
+                <td id="a-xl">71</td>
+                <td id="a-xxl">73</td>
+                <td id="a-xxxl">75</td>
+            </tr>
+            <tr>
+                <td>B 1/2 CHEST (<span id="unit-b">CM</span>)</td>
+                <td id="b-xxs">60</td>
+                <td id="b-xs">62</td>
+                <td id="b-s">64</td>
+                <td id="b-m">66</td>
+                <td id="b-l">68</td>
+                <td id="b-xl">70</td>
+                <td id="b-xxl">72</td>
+                <td id="b-xxxl">74</td>
+            </tr>
+            <tr>
+                <td>C 1/2 HEM (<span id="unit-c">CM</span>)</td>
+                <td id="c-xxs">37</td>
+                <td id="c-xs">39</td>
+                <td id="c-s">41</td>
+                <td id="c-m">43</td>
+                <td id="c-l">45</td>
+                <td id="c-xl">47</td>
+                <td id="c-xxl">49</td>
+                <td id="c-xxxl">51</td>
+            </tr>
+            <tr>
+                <td>D SLEEVE LENGTH (<span id="unit-d">CM</span>)</td>
+                <td id="d-xxs">56</td>
+                <td id="d-xs">57.5</td>
+                <td id="d-s">59</td>
+                <td id="d-m">60.5</td>
+                <td id="d-l">62</td>
+                <td id="d-xl">63.5</td>
+                <td id="d-xxl">65</td>
+                <td id="d-xxxl">66.5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="toggle-container">
+        <div class="toggle-switch" onclick="toggleUnit()">
+            <div class="toggle-button" id="toggle-button"></div>
+            <span class="toggle-label active" id="metric-label">Metric</span>
+            <span class="toggle-label" id="imperial-label">Imperial</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const metricValues = {
+        "a": [61, 63, 65, 67, 69, 71, 73, 75],
+        "b": [60, 62, 64, 66, 68, 70, 72, 74],
+        "c": [37, 39, 41, 43, 45, 47, 49, 51],
+        "d": [56, 57.5, 59, 60.5, 62, 63.5, 65, 66.5]
+    };
+
+    const imperialValues = {
+        "a": [24, 24.8, 25.6, 26.4, 27.2, 28, 28.7, 29.5],
+        "b": [23.6, 24.4, 25.2, 26, 26.8, 27.6, 28.3, 29.1],
+        "c": [14.6, 15.4, 16.1, 16.9, 17.7, 18.5, 19.3, 20.1],
+        "d": [22, 22.6, 23.2, 23.8, 24.4, 25, 25.6, 26.2]
+    };
+
+    let isMetric = true;
+
+    function toggleUnit() {
+        isMetric = !isMetric;
+
+        const button = document.getElementById("toggle-button");
+        const metricLabel = document.getElementById("metric-label");
+        const imperialLabel = document.getElementById("imperial-label");
+
+        if (isMetric) {
+            button.style.transform = "translateX(0)";
+            metricLabel.classList.add("active");
+            imperialLabel.classList.remove("active");
+            updateTable(metricValues, "CM");
+        } else {
+            button.style.transform = "translateX(60px)";
+            imperialLabel.classList.add("active");
+            metricLabel.classList.remove("active");
+            updateTable(imperialValues, "IN");
+        }
+    }
+
+    function updateTable(values, unit) {
+        document.getElementById("unit-a").innerText = unit;
+        document.getElementById("unit-b").innerText = unit;
+        document.getElementById("unit-c").innerText = unit;
+        document.getElementById("unit-d").innerText = unit;
+
+        Object.keys(values).forEach(row => {
+            values[row].forEach((value, index) => {
+                document.getElementById(`${row}-${['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'][index]}`).innerText = value;
+            });
+        });
+    }
+</script>
+
+</body>
+</html></div>
+  </div>
+</body>
+</html>
