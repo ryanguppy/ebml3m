@@ -5,6 +5,13 @@ a:hover { color:#B2B3B4; }
 body { background-color:#FFFFFF; padding:0;  margin: 0; }
 .textstyle1 { text-align:left; }
 #img_7635e4ac { position:absolute; left:0%; top:0%; width:9%; background:none; height:auto;  }
-#img_2c7116ea { box-sizing: border-box; border-radius: 15px; position:absolute; left:5%; top:29%; width:26%; background:none; border: 10px solid #404040; height:auto;  }
-#img_6322fe62 { box-sizing: border-box; border-radius: 15px; position:absolute; left:38%; top:30%; width:23%; background:none; border: 10px solid #404040; height:auto;  }
-#img_1ce2b571 { box-sizing: border-box; border-radius: 15px; position:absolute; left:69%; top:29%; width:26%; background:none; border: 10px solid #404040; height:auto;  }
+#img_2c7116ea { box-sizing: border-box; border-radius: 15px; position:absolute; left:5%; top:28%; width:26%; background:none; border: 10px solid #404040; height:auto;  }
+#img_6322fe62 { box-sizing: border-box; border-radius: 15px; position:absolute; left:38%; top:28%; width:23%; background:none; border: 10px solid #404040; height:auto;  }
+#img_1ce2b571 { box-sizing: border-box; border-radius: 15px; position:absolute; left:69%; top:28%; width:26%; background:none; border: 10px solid #404040; height:auto;  }
+#button_6771e4d8 { box-sizing: border-box; border-radius: 10px; position:absolute; left:45%; top:73%; width:128px; height:53px; background-color:#C0C0C0; border: 4px solid #404040;  }
+.vcenterstyle1 { display: table; width: 100%; height: 100%; }
+.vcenterstyle2 { display: table-cell; vertical-align: middle; }
+.textstyle2 { text-align:center; }
+.textstyle3 { font-size:12pt; font-family:'The Billion Butterfly Personal'; color:#000000;  }
+#button_1fce3f8f { box-sizing: border-box; border-radius: 10px; position:absolute; left:12%; top:73%; width:128px; height:53px; background-color:#C0C0C0; border: 4px solid #404040;  }
+#button_61d4c6b3 { box-sizing: border-box; border-radius: 10px; position:absolute; left:78%; top:73%; width:128px; height:53px; background-color:#C0C0C0; border: 4px solid #404040;  }
